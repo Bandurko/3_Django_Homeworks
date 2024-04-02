@@ -1,0 +1,18 @@
+INFO 2024-04-03 08:57:46,588 autoreload 13840 9552 Watching for file changes with StatReloader
+INFO 2024-04-03 08:57:55,715 views 13840 10016 Index page requested.
+INFO 2024-04-03 08:57:55,717 basehttp 13840 10016 "GET / HTTP/1.1" 200 208
+WARNING 2024-04-03 08:57:55,927 log 13840 10016 Not Found: /favicon.ico
+INFO 2024-04-03 08:57:55,928 basehttp 13840 10016 - Broken pipe from ('127.0.0.1', 58665)
+INFO 2024-04-03 08:58:09,822 views 13840 10280 About page requested.
+INFO 2024-04-03 08:58:09,824 basehttp 13840 10280 "GET /about/ HTTP/1.1" 200 526
+WARNING 2024-04-03 08:58:09,952 log 13840 10280 Not Found: /favicon.ico
+INFO 2024-04-03 08:58:09,953 basehttp 13840 10280 - Broken pipe from ('127.0.0.1', 58681)
+INFO 2024-04-03 08:59:41,215 autoreload 8516 15188 Watching for file changes with StatReloader
+INFO 2024-04-03 08:59:45,034 views 8516 14480 Index page requested.
+INFO 2024-04-03 08:59:45,036 basehttp 8516 14480 "GET / HTTP/1.1" 200 208
+WARNING 2024-04-03 08:59:45,220 log 8516 14480 Not Found: /favicon.ico
+INFO 2024-04-03 08:59:45,221 basehttp 8516 14480 - Broken pipe from ('127.0.0.1', 58730)
+INFO 2024-04-03 09:00:02,356 views 8516 7944 About page requested.
+INFO 2024-04-03 09:00:02,357 basehttp 8516 7944 "GET /about/ HTTP/1.1" 200 526
+WARNING 2024-04-03 09:00:02,486 log 8516 7944 Not Found: /favicon.ico
+INFO 2024-04-03 09:00:02,487 basehttp 8516 7944 - Broken pipe from ('127.0.0.1', 58734)
