@@ -16,3 +16,5 @@ INFO 2024-04-03 09:00:02,356 views 8516 7944 About page requested.
 INFO 2024-04-03 09:00:02,357 basehttp 8516 7944 "GET /about/ HTTP/1.1" 200 526
 WARNING 2024-04-03 09:00:02,486 log 8516 7944 Not Found: /favicon.ico
 INFO 2024-04-03 09:00:02,487 basehttp 8516 7944 - Broken pipe from ('127.0.0.1', 58734)
+INFO 2024-04-04 09:49:10,653 autoreload 13584 11284 Watching for file changes with StatReloader
+INFO 2024-04-04 10:00:33,330 autoreload 13608 1444 Watching for file changes with StatReloader
