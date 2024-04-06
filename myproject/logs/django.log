@@ -18,3 +18,88 @@ WARNING 2024-04-03 09:00:02,486 log 8516 7944 Not Found: /favicon.ico
 INFO 2024-04-03 09:00:02,487 basehttp 8516 7944 - Broken pipe from ('127.0.0.1', 58734)
 INFO 2024-04-04 09:49:10,653 autoreload 13584 11284 Watching for file changes with StatReloader
 INFO 2024-04-04 10:00:33,330 autoreload 13608 1444 Watching for file changes with StatReloader
+INFO 2024-04-07 03:00:14,915 autoreload 9832 11792 Watching for file changes with StatReloader
+INFO 2024-04-07 03:00:19,538 views 9832 13120 Index page requested.
+INFO 2024-04-07 03:00:19,539 basehttp 9832 13120 "GET / HTTP/1.1" 200 208
+ERROR 2024-04-07 03:00:33,696 log 9832 13120 Internal Server Error: /2
+Traceback (most recent call last):
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\myproject\myapp2\views.py", line 13, in index
+    return render(request, 'myapp2/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\template\base.py", line 481, in parse
+    raise self.error(token, e)
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\template\base.py", line 479, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '('static', filename='css/bootstrap.min.css')' from 'url_for('static', filename='css/bootstrap.min.css')'
+ERROR 2024-04-07 03:00:33,710 basehttp 9832 13120 "GET /2 HTTP/1.1" 500 164485
+INFO 2024-04-07 03:04:43,540 basehttp 9832 9752 "GET /2 HTTP/1.1" 200 531
+WARNING 2024-04-07 03:04:43,624 log 9832 9752 Not Found: /favicon.ico
+INFO 2024-04-07 03:04:43,625 basehttp 9832 9752 - Broken pipe from ('127.0.0.1', 53559)
+INFO 2024-04-07 03:05:58,640 autoreload 9720 14196 Watching for file changes with StatReloader
+INFO 2024-04-07 03:06:13,701 views 9720 13008 Index page requested.
+INFO 2024-04-07 03:06:13,703 basehttp 9720 13008 "GET / HTTP/1.1" 200 208
+WARNING 2024-04-07 03:06:13,842 log 9720 13008 Not Found: /favicon.ico
+INFO 2024-04-07 03:06:13,843 basehttp 9720 13008 - Broken pipe from ('127.0.0.1', 53569)
+INFO 2024-04-07 03:06:22,825 basehttp 9720 1720 "GET /2 HTTP/1.1" 200 531
+WARNING 2024-04-07 03:06:22,922 log 9720 1720 Not Found: /favicon.ico
+INFO 2024-04-07 03:06:22,923 basehttp 9720 1720 - Broken pipe from ('127.0.0.1', 53570)
