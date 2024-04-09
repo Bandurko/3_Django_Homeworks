@@ -103,3 +103,155 @@ INFO 2024-04-07 03:06:13,843 basehttp 9720 13008 - Broken pipe from ('127.0.0.1'
 INFO 2024-04-07 03:06:22,825 basehttp 9720 1720 "GET /2 HTTP/1.1" 200 531
 WARNING 2024-04-07 03:06:22,922 log 9720 1720 Not Found: /favicon.ico
 INFO 2024-04-07 03:06:22,923 basehttp 9720 1720 - Broken pipe from ('127.0.0.1', 53570)
+INFO 2024-04-10 09:16:26,117 autoreload 13796 16076 Watching for file changes with StatReloader
+INFO 2024-04-10 09:16:31,051 views 13796 10740 Index page requested.
+INFO 2024-04-10 09:16:31,052 basehttp 13796 10740 "GET / HTTP/1.1" 200 208
+INFO 2024-04-10 09:16:50,696 basehttp 13796 10740 "GET /shop HTTP/1.1" 200 531
+WARNING 2024-04-10 09:17:33,362 log 13796 10740 Not Found: /shop/product_form/2
+WARNING 2024-04-10 09:17:33,363 basehttp 13796 10740 "GET /shop/product_form/2 HTTP/1.1" 404 3290
+INFO 2024-04-10 09:20:37,236 autoreload 13796 16076 E:\3_SPEC-TION\3_Django_Homeworks\myproject\myapp2\views.py changed, reloading.
+INFO 2024-04-10 09:20:39,067 autoreload 16056 8888 Watching for file changes with StatReloader
+INFO 2024-04-10 09:20:48,878 views 16056 13748 Index page requested.
+INFO 2024-04-10 09:20:48,880 basehttp 16056 13748 "GET / HTTP/1.1" 200 208
+WARNING 2024-04-10 09:20:49,061 log 16056 13748 Not Found: /favicon.ico
+INFO 2024-04-10 09:20:49,062 basehttp 16056 13748 - Broken pipe from ('127.0.0.1', 52770)
+WARNING 2024-04-10 09:21:28,036 log 16056 17220 Not Found: /shop/product_form/2
+WARNING 2024-04-10 09:21:28,038 basehttp 16056 17220 "GET /shop/product_form/2 HTTP/1.1" 404 3290
+WARNING 2024-04-10 09:21:28,135 log 16056 17220 Not Found: /favicon.ico
+INFO 2024-04-10 09:21:28,136 basehttp 16056 17220 - Broken pipe from ('127.0.0.1', 52774)
+INFO 2024-04-10 09:22:44,158 autoreload 16056 8888 E:\3_SPEC-TION\3_Django_Homeworks\myproject\myproject\urls.py changed, reloading.
+INFO 2024-04-10 09:22:45,980 autoreload 11732 1240 Watching for file changes with StatReloader
+INFO 2024-04-10 09:22:55,275 basehttp 11732 7528 "GET /shop/product_form/2 HTTP/1.1" 301 0
+INFO 2024-04-10 09:22:55,326 basehttp 11732 5212 "GET /shop/product_form/2/ HTTP/1.1" 200 1688
+ERROR 2024-04-10 09:30:06,627 log 11732 9080 Internal Server Error: /shop/product_form/2/
+Traceback (most recent call last):
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\myproject\myapp2\views.py", line 62, in product_form
+    product.save()
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\models\base.py", line 1036, in _save_table
+    updated = self._do_update(
+              ^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\models\base.py", line 1101, in _do_update
+    return filtered._update(values) > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\models\query.py", line 1278, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1990, in execute_sql
+    cursor = super().execute_sql(result_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: database is locked
+ERROR 2024-04-10 09:30:06,640 basehttp 11732 9080 "POST /shop/product_form/2/ HTTP/1.1" 500 163207
+INFO 2024-04-10 09:33:22,842 autoreload 7660 9424 Watching for file changes with StatReloader
+INFO 2024-04-10 09:33:29,780 views 7660 14144 Index page requested.
+INFO 2024-04-10 09:33:29,783 basehttp 7660 14144 "GET / HTTP/1.1" 200 208
+INFO 2024-04-10 09:33:29,931 views 7660 14144 Index page requested.
+INFO 2024-04-10 09:33:29,932 basehttp 7660 14144 "GET / HTTP/1.1" 200 208
+WARNING 2024-04-10 09:33:30,176 log 7660 14144 Not Found: /favicon.ico
+INFO 2024-04-10 09:33:30,177 basehttp 7660 14144 - Broken pipe from ('127.0.0.1', 53108)
+WARNING 2024-04-10 09:33:30,181 log 7660 3580 Not Found: /favicon.ico
+INFO 2024-04-10 09:33:30,182 basehttp 7660 3580 - Broken pipe from ('127.0.0.1', 53109)
+INFO 2024-04-10 09:35:14,666 basehttp 7660 15700 "GET /shop/product_form/2/ HTTP/1.1" 200 1688
+ERROR 2024-04-10 09:36:25,043 log 7660 15700 Internal Server Error: /shop/product_form/2/
+Traceback (most recent call last):
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\myproject\myapp2\views.py", line 62, in product_form
+    product.save()
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\models\base.py", line 1036, in _save_table
+    updated = self._do_update(
+              ^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\models\base.py", line 1101, in _do_update
+    return filtered._update(values) > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\models\query.py", line 1278, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1990, in execute_sql
+    cursor = super().execute_sql(result_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\3_SPEC-TION\3_Django_Homeworks\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: database is locked
+ERROR 2024-04-10 09:36:25,054 basehttp 7660 15700 "POST /shop/product_form/2/ HTTP/1.1" 500 153887

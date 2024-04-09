@@ -8,7 +8,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         client = Client(
-            name='Vasya', email='pupkin_v@example.com', phone=78904567890,
+            name='Yura', email='pupkin_y@yexample.com', phone=78904567874,
             address='Bobruysk')
         client.save()
         self.stdout.write(f'{client}')

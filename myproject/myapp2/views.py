@@ -1,9 +1,11 @@
 from datetime import timedelta, datetime
 
-from django.shortcuts import render, get_object_or_404
+from django.core.files.storage import FileSystemStorage
+from .forms import ProductForm
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 
-from myapp2.models import Client, Order
+from myapp2.models import Client, Order, Product
 
 
 # Create your views here.
@@ -40,3 +42,31 @@ def client_products_sorted(request, id_client: int, days: int):
 
     return render(request, 'myapp2/client_all_products_from_orders.html',
                   {'client': client, 'product_set': product_set, 'days': days})
+
+
+# представление для ввода данных о продукте через форму и сохранение изображения продукта на сервер
+def product_form(request, id_product: int):
+    product = get_object_or_404(Product, pk=id_product)
+    if request.method == "POST":
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            product.title = request.POST["title"]
+            product.description = request.POST["description"]
+            product.price = request.POST["price"]
+            product.count = request.POST["count"]
+            image_product = form.cleaned_data['image_product']
+            fs = FileSystemStorage()
+            fs.save(image_product.name, image_product)  # сохранение image на сервер
+            if "image_product" in request.FILES:
+                product.image_product = request.FILES["image_product"]  # запись Image в переменную БД
+            product.save()
+            # logger.info(f"Product {product.title} is changed successfully")
+            return redirect("product", id_product=product.id)
+    else:
+        form = ProductForm()
+
+    context = {
+        "form": form,
+        "product": product,
+    }
+    return render(request, "myapp2/product_form.html", context=context)
