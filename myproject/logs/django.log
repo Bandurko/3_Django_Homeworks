@@ -561,3 +561,24 @@ INFO 2024-04-12 05:37:31,449 basehttp 4708 14640 "POST /admin/myapp2/order/4/cha
 INFO 2024-04-12 05:37:31,474 basehttp 4708 14640 "GET /admin/myapp2/order/ HTTP/1.1" 200 15381
 INFO 2024-04-12 05:37:31,563 basehttp 4708 14640 "GET /admin/jsi18n/ HTTP/1.1" 200 17546
 INFO 2024-04-12 05:37:43,810 basehttp 4708 14640 "POST /admin/logout/ HTTP/1.1" 200 3817
+INFO 2024-04-12 05:43:58,152 autoreload 13564 14628 Watching for file changes with StatReloader
+WARNING 2024-04-12 05:44:01,570 log 13564 14832 Not Found: /
+WARNING 2024-04-12 05:44:01,572 basehttp 13564 14832 "GET / HTTP/1.1" 404 2272
+WARNING 2024-04-12 05:44:01,696 log 13564 14832 Not Found: /favicon.ico
+INFO 2024-04-12 05:44:01,697 basehttp 13564 14832 - Broken pipe from ('127.0.0.1', 54290)
+INFO 2024-04-12 05:45:09,916 autoreload 6064 2864 Watching for file changes with StatReloader
+INFO 2024-04-12 05:45:17,441 basehttp 6064 13336 "GET / HTTP/1.1" 200 531
+WARNING 2024-04-12 05:45:17,521 log 6064 13336 Not Found: /favicon.ico
+INFO 2024-04-12 05:45:17,522 basehttp 6064 13336 - Broken pipe from ('127.0.0.1', 54297)
+INFO 2024-04-12 05:53:47,776 basehttp 6064 14488 "GET / HTTP/1.1" 200 551
+WARNING 2024-04-12 05:53:47,862 log 6064 14488 Not Found: /favicon.ico
+INFO 2024-04-12 05:53:47,863 basehttp 6064 14488 - Broken pipe from ('127.0.0.1', 54391)
+INFO 2024-04-12 05:57:35,749 basehttp 6064 13812 "GET / HTTP/1.1" 200 603
+WARNING 2024-04-12 05:57:35,829 log 6064 13812 Not Found: /favicon.ico
+INFO 2024-04-12 05:57:35,830 basehttp 6064 13812 - Broken pipe from ('127.0.0.1', 54428)
+INFO 2024-04-12 06:00:25,868 basehttp 6064 11464 "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-04-12 06:00:25,912 basehttp 6064 11464 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4359
+INFO 2024-04-12 06:00:26,140 basehttp 6064 11464 - Broken pipe from ('127.0.0.1', 54447)
+INFO 2024-04-12 06:01:25,146 basehttp 6064 9472 "GET / HTTP/1.1" 200 677
+INFO 2024-04-12 06:01:34,111 basehttp 6064 9472 "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-04-12 06:01:34,137 basehttp 6064 9472 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4359
