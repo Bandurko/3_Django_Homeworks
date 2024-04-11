@@ -15,6 +15,32 @@ def index(request):
     return render(request, 'myapp2/index.html')
 
 
+# вывод всех товаров
+def products(request):
+    products = Product.objects.all()
+    # logger.info(f'Страница "Список продуктов" успешно открыта')
+    return render(request, 'myapp2/products.html', {'products': products})
+
+
+# вывод списка всех клиентов
+def clients(request):
+    clients = Client.objects.all()
+
+    # logger.info(f'Страница "Список клиентов" успешно открыта')
+    return render(request, 'myapp2/clients.html', {'clients': clients})
+
+
+# вывод списка заказов
+def orders(request):
+    products_all = []
+    orders = Order.objects.all()
+
+    context = {
+        'orders': orders
+    }
+    return render(request, 'myapp2/orders_all.html', context=context)
+
+
 def client_orders(request, id_client: int):
     products = {}
 
@@ -27,6 +53,15 @@ def client_orders(request, id_client: int):
 
     return render(request, 'myapp2/client_orders.html', {'client': client, 'orders': orders,
                                                         'products': products})
+
+
+def product(request, id_product: int):
+    product = Product.objects.filter(pk=id_product).first()
+    context = {
+        "product": product
+
+    }
+    return render(request, "myapp2/product.html", context=context)
 
 def client_products_sorted(request, id_client: int, days: int):
     product_set = []
