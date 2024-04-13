@@ -17,7 +17,9 @@ def index(request: HttpRequest):
     <title>Главная</title>
 </head>
 <body>
-    <h1>Это Главная страница сайта на Django.</h1>
+    <p><h1>Это Главная страница сайта на Django.</h1></p>
+    <p><a href="https://bandurko1gb.pythonanywhere.com/about/">Обо мне.</a></p>
+    <p><a href="https://bandurko1gb.pythonanywhere.com/shop/">Интернет-магазин.</a></p>
 </body>
 </html>
 """
@@ -35,12 +37,9 @@ def about(request: HttpRequest):
 </head>
 <body>
     <p><h1>Эта страница обо мне.</h1></p>
-    <h3>Меня зовут Вася Пупкин.<br>
-    Я живу в Бобруйске.<br>
-    Учу албанский.</h3>
+    <h3>Меня зовут Бандурко Сергей.<br>
+    Я живу во Владивостоке.</h3>
     <p>
-    <img src="https://p1.hiclipart.com/preview/412/169/291/emoticon-smiley-yellow-facial-expression-head-nose-mouth-eye-png-clipart.jpg" 
-    width="300"  height="300" alt="Смайлик"></p>
 </body>
 </html>
 """
