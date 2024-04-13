@@ -18,8 +18,6 @@ def index(request: HttpRequest):
 </head>
 <body>
     <p><h1>Это Главная страница сайта на Django.</h1></p>
-    <p><a href="https://bandurko1gb.pythonanywhere.com/about/">Обо мне.</a></p>
-    <p><a href="https://bandurko1gb.pythonanywhere.com/shop/">Интернет-магазин.</a></p>
 </body>
 </html>
 """
